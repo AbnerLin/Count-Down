@@ -1,0 +1,48 @@
+extends layout
+
+block head
+  script(src='/javascripts/jquery-1.11.3.min.js')  
+  script(src='/javascripts/jquery.lwtCountdown-1.0.js')
+  script(src='/javascripts/misc.js')
+  script(src='/javascripts/index.js')
+  link(href='/stylesheets/main.css')
+  link(href='/stylesheets/style.css')
+
+block content
+    div#main
+      div#left
+        div#title
+          span#contentTitle 學期倒數
+          br
+          span#content GoodBye, GoodBye, GoodBye, GoodBye,
+        div#countdown_dashboard
+          //div.dash.weeks_dash
+            span.dash_title weeks
+            div.digit 0
+            div.digit 0
+    
+          div#up
+            div.dash.days_dash
+              div.digit 0
+              div.digit 0
+              span.dash_title days
+
+            div.dash.hours_dash
+              div.digit 0
+              div.digit 0
+              span.dash_title hours
+
+          div#down
+            div.dash.minutes_dash
+              div.digit 0
+              div.digit 0
+              span.dash_title minutes
+
+            div.dash.seconds_dash
+              div.digit 0
+              div.digit 0
+              span.dash_title seconds  
+          
+    div#media
+      audio(preload="auto", autobuffer, autoplay, controls)
+        source(src="/music/music.mp3")

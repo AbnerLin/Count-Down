@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block head
+  body
+    include header.jade
+    block content
+    include footer.jade

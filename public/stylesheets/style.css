@@ -1,0 +1,118 @@
+html {
+  height: 100%;
+}
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url("/images/YuntechEvergreen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Microsoft JhengHei;
+}
+
+a {
+  color: #00B7FF;
+}
+
+span#content {
+  color: #04B4AE;
+  font-weight: bold;
+}
+
+#main {
+//  border: 1px solid black;
+  width: 1000px;
+  height: 400px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+#left {
+  //border: 1px solid black;
+  width: 300px;
+  height: 100%;
+  padding: 10px;
+}
+
+#title {
+  width: 100%;
+  height: 150px;
+  //border: 1px solid black;
+  text-align: center;
+}
+
+#contentTitle {
+  font-size: 48px;
+  font-weight: bold;
+//  color: #04B4AE;
+ // color: #F7819F;
+  color: red;
+}
+
+#up, #down {
+  width: 100%;
+  height: 100px;
+}
+
+#up {
+  padding-left: 40px;
+}
+
+#down {
+  padding-left: 60px;
+}
+
+.dash {
+  float: left;
+//  border: 1px solid black;
+  width: 80px;
+  margin-right: 20px;
+}
+
+.digit {
+  float: left;
+  width: 30px;
+  height: 50px;
+  font-size: 48px;
+  text-align: center;
+  font-weight: bold;
+//  color: #F7819F;
+  color: red;
+}
+
+.dash_title {
+  float: left;
+  width: 100%;
+//  color: #F7819F; 
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  margin-left: -5px;
+}
+
+#footer {
+  font-family: Lucida Grande, Verdana, Lucida, Helvetica, Arial, Simsun, sans-serif;
+  font-size: 13px;
+  color: #333333;
+  text-align: center;
+  width: 100%;
+/*	position: fixed;*/
+/*	bottom: 0;*/
+  margin-top: 10px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+#media {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
