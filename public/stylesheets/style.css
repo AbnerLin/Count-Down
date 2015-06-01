@@ -24,9 +24,14 @@ a {
   color: #00B7FF;
 }
 
-span#content {
+#content {
   color: #04B4AE;
   font-weight: bold;
+  height: 200px;
+}
+
+#content p {
+  text-align: left;
 }
 
 #main {
@@ -52,6 +57,7 @@ span#content {
  // border: 1px solid black;
   float: left;
   overflow-y: auto;
+  margin-left: 10px;
 }
 
 #inputBlock p {
@@ -84,6 +90,7 @@ span#content {
 }
 
 #up {
+  margin-top: 10px;
   padding-left: 40px;
 }
 
@@ -148,7 +155,7 @@ span#content {
 
 .time {
   float: right;
-  color: grey;
+  color: #04B4AE;
   font-size: 12px;
 }
 
