@@ -16,6 +16,8 @@ $(function() {
 			}
         	});
 
+		$("#right").scrollTop($("#right")[0].scrollHeight);
+
 		socket.on('message', function(msg) {
 			addMsg(msg);
 		});
@@ -28,15 +30,23 @@ $(function() {
 			var comment = $.trim($(this).val());
 			if(comment.length > 0) {
 				socket.emit('message', $(this).val());
+				addMsg($(this).val())
 				$('#inputTag').val("");
 				$('#inputTag').focus();
 			}
 		}
 	});
 
-	function addMsg(msg) {
-		//$()
+	function zerofill(num) {
+		return (num < 10 ? "0" : "") + num;
+	}
 
+	function addMsg(msg) {
+		var date = new Date();
+		var currentDate = date.getFullYear() + "-" + zerofill(date.getMonth() + 1) + "-" + zerofill(date.getDate()) + " " + zerofill(date.getHours()) + ":" + zerofill(date.getMinutes()); 
+		$('#right').append("<div class=\"msg\"><p class=\"eachMessage\">" + msg + "</p><p class=\"time\">at " + currentDate + "</p></div>");
+		
+		$("#right").scrollTop($("#right")[0].scrollHeight);
 	}
 	
 });
