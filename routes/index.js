@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   connection.query('SELECT content, FROM_UNIXTIME(UNIX_TIMESTAMP(time)) as time FROM MESSAGE', function(error, results) {
     if(error)
       throw error;
-    console.log(results);    
+    
     results.forEach(function(item) {
       item.time = dateFormat(item.time, "yyyy-mm-dd HH:MM");
     });

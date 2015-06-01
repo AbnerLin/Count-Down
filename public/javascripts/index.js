@@ -1,4 +1,5 @@
 $(function() {
+	var socket = io();
 	$(document).ready(function() {
 		$('#countdown_dashboard').countDown({
         	        targetDate: {
@@ -15,7 +16,27 @@ $(function() {
 			}
         	});
 
+		socket.on('message', function(msg) {
+			addMsg(msg);
+		});
+
 	});
 
+	$('#inputTag').keydown(function(e) {
+		if(e.keyCode == 13 && e.shiftKey) {
+			e.preventDefault();
+			var comment = $.trim($(this).val());
+			if(comment.length > 0) {
+				socket.emit('message', $(this).val());
+				$('#inputTag').val("");
+				$('#inputTag').focus();
+			}
+		}
+	});
+
+	function addMsg(msg) {
+		//$()
+
+	}
 	
 });
