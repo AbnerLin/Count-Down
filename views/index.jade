@@ -46,10 +46,13 @@ block content
               div.digit 0
               div.digit 0
               span.dash_title seconds  
+
       div#right
-        - for(var x = 0; x < 3; x++)
-          div.message
-            p aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        - for(var i = 0; i < message.length; i++)
+          div.msg
+            p.eachMessage= message[i].content
+            p.time= message[i].time
+    
     div#media
       audio(preload="auto", autobuffer, autoplay, controls)
         source(src="/music/music.mp3")
